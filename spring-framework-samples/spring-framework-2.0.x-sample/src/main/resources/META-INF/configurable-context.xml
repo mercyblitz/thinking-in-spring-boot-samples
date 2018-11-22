@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 通过 placeholder "env" 加载所在环境的上下文 xml 文件 -->
+    <!-- 如： 开发环境 "env" = "dev"，即加载 "/META-INF/dev-context.xml" 文件-->
+    <import resource="classpath:/META-INF/${env}-context.xml"/>
+
+</beans>

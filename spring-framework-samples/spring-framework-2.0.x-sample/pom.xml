@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>thinking-in-spring-boot</groupId>
+        <artifactId>spring-framework-samples</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-framework-2.0.x-sample</artifactId>
+    <name>《Spring Boot 编程思想》Spring Framework 2.0.x 示例工程</name>
+
+
+    <dependencies>
+        <!-- Spring 2.0.x 最新发布版本 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>2.0.8</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

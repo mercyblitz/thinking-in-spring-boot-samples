@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 导入其他 Spring 上下文 XML 配置文件 -->
+    <import resource="classpath:/META-INF/spring/others.xml" />
+    <!-- 注册 Annotation 处理器，比如处理：@Autowired -->
+    <context:annotation-config />
+    <!-- 找寻被@Component或者其派生 Annotation 标记的类（Class），将它们注册为 Spring Bean -->
+    <context:component-scan base-package="thinking.in.spring.boot.samples" />
+    <!-- Bean 的定义 -->
+    <bean id="user" class="thinking.in.spring.boot.samples.spring3.domain.User" >
+        <property name="name" value="小马哥" />
+    </bean>
+
+</beans>

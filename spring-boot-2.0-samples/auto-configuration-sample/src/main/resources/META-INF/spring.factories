@@ -1,0 +1,3 @@
+# org.springframework.boot.autoconfigure.AutoConfigurationImportListener 配置
+org.springframework.boot.autoconfigure.AutoConfigurationImportListener=\
+thinking.in.spring.boot.samples.auto.configuration.listener.DefaultAutoConfigurationImportListener

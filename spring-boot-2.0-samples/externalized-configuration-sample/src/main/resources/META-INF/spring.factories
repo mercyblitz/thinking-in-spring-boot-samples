@@ -1,0 +1,15 @@
+# 配置 SpringApplicationRunListener 实现
+org.springframework.boot.SpringApplicationRunListener=\
+thinking.in.spring.boot.samples.externalized.configuration.listener.ExtendPropertySourcesRunListener
+
+# 配置 ApplicationListener 实现
+org.springframework.context.ApplicationListener=\
+thinking.in.spring.boot.samples.externalized.configuration.listener.ExtendPropertySourcesApplicationListener
+
+# 配置 EnvironmentPostProcessor 实现
+org.springframework.boot.env.EnvironmentPostProcessor=\
+thinking.in.spring.boot.samples.externalized.configuration.env.ExtendPropertySourcesEnvironmentPostProcessor
+
+# 配置 ApplicationContextInitializer 实现
+org.springframework.context.ApplicationContextInitializer=\
+thinking.in.spring.boot.samples.externalized.configuration.context.ExtendPropertySourcesApplicationContextInitializer

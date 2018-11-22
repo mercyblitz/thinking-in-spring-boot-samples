@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-boot-samples</artifactId>
+        <groupId>thinking-in-spring-boot</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-framework-samples</artifactId>
+    <name>《Spring Boot 编程思想》Spring Framework 示例主工程</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- Spring Framework 5.0 最新的版本 -->
+        <!-- 子模块工程根据版本需要，调整 spring.version 属性 -->
+        <spring.version>5.0.6.RELEASE</spring.version>
+    </properties>
+
+    <modules>
+        <module>spring-framework-2.0.x-sample</module>
+        <module>spring-framework-2.5.6-sample</module>
+        <module>spring-framework-3.2.x-sample</module>
+        <module>spring-framework-4.3.x-sample</module>
+        <module>spring-framework-5.0.x-sample</module>
+        <module>spring-framework-3.0.x-sample</module>
+        <module>spring-webmvc-3.2.x-sample</module>
+        <module>spring-framework-3.1.x-sample</module>
+    </modules>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- Spring 上下文依赖 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- Spring 事务依赖 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- Spring Web MVC 依赖 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+</project>

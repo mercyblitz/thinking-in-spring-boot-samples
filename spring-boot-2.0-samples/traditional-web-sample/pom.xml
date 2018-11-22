@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>thinking-in-spring-boot</groupId>
+        <artifactId>spring-boot-2.0-samples</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>traditional-web-sample</artifactId>
+    <packaging>war</packaging>
+    <name>《Spring Boot 编程思想》Spring Boot 2.0 应用部署到传统 Servlet 容器示例</name>
+
+    <dependencies>
+
+        <!-- 测试 Servlet 3.0+ 模块化部署 -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>shared-servlet31</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <!--
+                    javax.el.ELManager 被 Hibernate Validator 依赖，
+                    它 与 Tomcat 7 之间存在冲突，因此移除 Hibernate
+                    Validator，Bean Validation 会受到影响
+                -->
+                <exclusion>
+                    <groupId>org.hibernate.validator</groupId>
+                    <artifactId>hibernate-validator</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--
+            由于当前 Spring Boot 应用将部署到 Tomcat （Servlet）容器中，
+            因此设置 spring-boot-starter-tomcat scope 为 provided
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Actuator : Production-Ready 特性 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <profiles>
+
+        <profile>
+            <id>tomcat</id>
+            <activation>
+                <!-- tomcat profile 默认为激活状态 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- traditional-web profile 使用 Tomcat Maven 插件 -->
+                    <!-- Tomcat Maven 插件用于构建可执行 war -->
+                    <plugin>
+                        <groupId>org.apache.tomcat.maven</groupId>
+                        <artifactId>tomcat7-maven-plugin</artifactId>
+                        <version>2.1</version>
+                        <executions>
+                            <execution>
+                                <id>tomcat-run</id>
+                                <goals>
+                                    <!-- 最终打包成可执行的jar包 -->
+                                    <goal>exec-war-only</goal>
+                                </goals>
+                                <phase>package</phase>
+                                <configuration>
+                                    <!-- ServletContext 路径 -->
+                                    <path>/</path>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>spring-boot</id>
+            <dependencies>
+                <!-- 覆盖默认依赖 -->
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <!-- Spring Boot Maven 插件，构建可执行 war -->
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>repackage</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
+
+
+</project>

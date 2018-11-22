@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd"
+              version="3.1">
+
+    <name>shared_servlet31</name>
+    
+    <context-param>
+        <param-name>web-fragment-name</param-name>
+        <param-value>shared-servlet31</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <servlet-class>thinking.in.spring.boot.shared.servlet.HelloWorldServlet</servlet-class>
+        <init-param>
+            <param-name>version</param-name>
+            <param-value>1.0.0</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <url-pattern>/hello-world</url-pattern>
+    </servlet-mapping>
+
+</web-fragment>

@@ -1,0 +1,2 @@
+org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration=\
+thinking.in.spring.boot.samples.production.ready.actuator.management.CustomizedManagementContextConfiguration

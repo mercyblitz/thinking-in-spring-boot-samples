@@ -1,0 +1,11 @@
+# @EnableAutoConfiguration 配置
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+thinking.in.spring.boot.samples.auto.configuration.ServletRegistrationAutoConfiguration
+
+# FailureAnalyzer 配置
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+thinking.in.spring.boot.samples.diagnostics.UnknownErrorFailureAnalyzer
+
+# FailureAnalysisReporter 配置
+org.springframework.boot.diagnostics.FailureAnalysisReporter=\
+thinking.in.spring.boot.samples.diagnostics.ConsoleFailureAnalysisReporter

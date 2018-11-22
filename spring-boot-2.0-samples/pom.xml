@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-boot-samples</artifactId>
+        <groupId>thinking-in-spring-boot</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-boot-2.0-samples</artifactId>
+    <name>《Spring Boot 编程思想》Spring Boot 2.0 示例主工程</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>first-app-by-gui</module>
+        <module>first-spring-boot-application</module>
+        <module>externalized-configuration-sample</module>
+        <module>traditional-web-sample</module>
+        <module>auto-configuration-sample</module>
+        <module>formatter-spring-boot-starter</module>
+        <module>spring-application-sample</module>
+        <module>production-ready-sample</module>
+    </modules>
+
+    <properties>
+        <spring-boot.version>2.0.2.RELEASE</spring-boot.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring Boot POM -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
