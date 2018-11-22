@@ -1,2 +1,3 @@
-# thinking-in-spring-boot
-Spring Boot 编程思想代码工程
+# 《Spring Boot 编程思想》示例工程
+
+敬请期待...
