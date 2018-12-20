@@ -3,13 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-boot-1.x-samples</artifactId>
         <groupId>thinking-in-spring-boot</groupId>
+        <artifactId>spring-boot-1.x-samples</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>spring-boot-1.3.x-project</artifactId>
     <name>《Spring Boot 编程思想》Spring Boot 1.3.x 示例工程</name>
 
@@ -17,4 +16,18 @@
         <spring-boot.version>1.3.8.RELEASE</spring-boot.version>
     </properties>
 
+    <dependencies>
+        <!--
+        org.springframework.boot:spring-boot-starter-web
+        org.springframework.boot:spring-boot-starter-actuator
+        继承于 parent thinking-in-spring-boot:spring-boot-1.x-samples，
+        两者的版本由当前 spring-boot.version 控制
+        -->
+
+        <!-- Jackson XML 支持-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+    </dependencies>
 </project>
