@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-boot-1.x-samples</artifactId>
         <groupId>thinking-in-spring-boot</groupId>
+        <artifactId>spring-boot-1.x-samples</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -16,16 +16,17 @@
 
     <dependencies>
 
+        <!--
+        org.springframework.boot:spring-boot-starter-web
+        org.springframework.boot:spring-boot-starter-actuator
+        继承于 parent thinking-in-spring-boot:spring-boot-1.x-samples，
+        两者的版本由当前 spring-boot.version 控制
+        -->
+
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>shared-servlet31</artifactId>
             <version>${project.version}</version>
-        </dependency>
-
-        <!-- Spring Boot Actuator -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
         <!-- Spring Security -->
