@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>thinking-in-spring-boot</groupId>
-    <artifactId>spring-framework-3.0.0-sample</artifactId>
+    <artifactId>spring-framework-3.0.x-sample</artifactId>
     <name>《Spring Boot 编程思想》Spring Framework 3.0.x 示例工程</name>
 
     <properties>
