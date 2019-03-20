@@ -15,7 +15,7 @@
 
 ## 自序
 
-- 《核心篇》](https://mercyblitz.github.io/books/thinking-in-spring-boot/core/preface/)（[预售中…](https://item.jd.com/12570242.html)）
+- [《核心篇》](https://mercyblitz.github.io/books/thinking-in-spring-boot/core/preface/)（[预售中…](https://item.jd.com/12570242.html)）
 - 《运维篇》（即将完稿…)
 - 《Web 篇》(编写中…)
 
