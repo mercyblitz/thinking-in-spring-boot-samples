@@ -75,9 +75,8 @@ public class TransactionalServiceAnnotationReflectionBootstrap {
                 .collect(HashSet::new, Set::addAll, Set::addAll);
 
         // 添加递归结果
-        metaAnnotationsSet.addAll(metaMetaAnnotationsSet);
-
-        return metaAnnotationsSet;
+        metaMetaAnnotationsSet.add(annotation);
+        return metaMetaAnnotationsSet;
     }
 
 
