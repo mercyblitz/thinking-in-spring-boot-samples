@@ -12,7 +12,7 @@
 
     <groupId>thinking-in-spring-boot</groupId>
     <artifactId>spring-framework-5.0.x-sample</artifactId>
-    <name>《Spring Boot 编程思想》Spring Framework 4.3.x 示例工程</name>
+    <name>《Spring Boot 编程思想》Spring Framework 5.0.x 示例工程</name>
 
     <dependencies>
 
