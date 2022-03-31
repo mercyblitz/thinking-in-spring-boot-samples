@@ -17,7 +17,7 @@
     <properties>
         <!-- Spring Framework 5.0 最新的版本 -->
         <!-- 子模块工程根据版本需要，调整 spring.version 属性 -->
-        <spring.version>5.0.6.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
     </properties>
 
     <modules>
