@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-2.x-sample</artifactId>
+    <artifactId>spring-boot-2.x-samples</artifactId>
     <name>《Spring Boot 编程思想》Spring Boot 2.x 示例主工程</name>
     <packaging>pom</packaging>
 
@@ -19,7 +19,7 @@
     </properties>
 
     <modules>
-        <module>spring-boot-2.0.x-sample</module>
+        <module>2.0.x</module>
     </modules>
 
 
