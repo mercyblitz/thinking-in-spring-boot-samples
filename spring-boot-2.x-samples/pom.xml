@@ -19,7 +19,7 @@
     </properties>
 
     <modules>
-        <module>2.0.x</module>
+        <module>2.0.x-sample</module>
     </modules>
 
 

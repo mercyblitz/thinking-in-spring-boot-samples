@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>thinking-in-spring-boot</groupId>
-        <artifactId>spring-boot-2.x-sample</artifactId>
+        <artifactId>spring-boot-2.x-samples</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
