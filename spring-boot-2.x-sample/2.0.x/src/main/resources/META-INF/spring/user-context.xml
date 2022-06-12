@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 导入 CustomEditorConfigurer -->
+    <import resource="classpath:/META-INF/spring/custom-editor.xml"/>
+
+    <!-- User Bean -->
+    <bean id="user" class="thinking.in.spring.boot.samples.api.domain.User">
+        <property name="id" value="${user.id}"/>
+        <property name="name" value="${user.name}"/>
+        <property name="birthday" value="${user.birthday}"/>
+    </bean>
+
+</beans>

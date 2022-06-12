@@ -38,7 +38,7 @@
     <modules>
         <module>shared-libraries</module>
         <module>spring-boot-1.x-samples</module>
-        <module>spring-boot-2.0-samples</module>
+        <module>spring-boot-2.x-sample</module>
         <module>spring-framework-samples</module>
         <module>traditional-samples</module>
     </modules>
