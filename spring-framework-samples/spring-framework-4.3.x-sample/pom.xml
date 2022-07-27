@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring4-sample</artifactId>
+    <artifactId>spring-framework-4.3.x-sample</artifactId>
     <name>《Spring Boot 编程思想》Spring Framework 4.3.x 示例工程</name>
 
     <properties>
